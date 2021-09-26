@@ -1,0 +1,94 @@
+
+/*responsive@990*/
+
+@media (max-width:990px){
+
+.elementor-1753 .elementor-element.elementor-element-7fd9862 .elementor-heading-title {
+    font-size: 50px;
+}
+
+	.res-section1 .elementor-container {
+    flex-direction: column-reverse;
+    background-color: #061b2b;
+}
+.res-section1-right.elementor-column.elementor-col-50, .elementor-column[data-col="50"] {
+    width: 100%;
+    height: 70vh;
+}
+	
+.res-section1-left.elementor-column.elementor-col-50, .elementor-column[data-col="50"] {
+    height: 25vh;
+}
+	
+.white-text-res h1#first-paragraph, .white-text-res h2.cs_text_up_one.cs-tup, .white-text-res h1.cs_text_up_one.cs-tup {
+    color: white;
+}
+
+.res-section1-left .elementor-widget-wrap {
+    margin-left: 30px;
+}
+	.res-section2 .elementor-container {
+    flex-direction: column-reverse;
+    background-color: #061b2b;
+}
+	
+	.res-section2-left.elementor-element-11bc61c {
+    height: 39vh;
+}
+	.res-section2-right.elementor-element-cd4b332 {
+    align-self: flex-end;
+    height: 50vh;
+}
+	.elementor-1753 .elementor-element.elementor-element-79b5319 > .elementor-widget-container {
+    padding: 0px 0px 0px 30px;
+}
+	
+	
+}/*****/
+
+
+/*responsive@768*/
+
+@media (max-width:768px){
+
+	body .elementor-column.elementor-col-50, body .elementor-column[data-col="50"] {
+    width: 100%;
+    height: 100%;
+}
+	
+.res-title1.elementor-widget.elementor-widget-heading {
+    width: 90%;
+}
+
+	.elementor-1753 .elementor-element.elementor-element-7fd9862 > .elementor-widget-container {
+    margin: 0 auto;
+}
+	
+.res-section1-left.elementor-column.elementor-col-50, .elementor-column[data-col="50"] {
+    height: 100vh;
+}
+	
+	
+	.elementor-element-34f2ace7 {
+    display: none;
+}
+	
+	.elementor-5373 .elementor-element.elementor-element-4b3968d7.elementor-column > .elementor-widget-wrap {
+    justify-content: unset;
+    padding: 0vh 0 13vh 3vw;
+}
+	
+	.res-section2 .elementor-container {
+    flex-direction: column;
+	}
+}/*****/
+
+
+
+/*responsive@390*/
+
+@media (max-width:390px){
+.res-title1.elementor-widget.elementor-widget-heading h1.elementor-heading-title.elementor-size-default {
+    font-size: 45px;
+}	
+}

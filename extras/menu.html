@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		body {
+    margin: 0px;
+  background-color: #666;
+}
+
+
+.hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 42px;
+    top: 95px;
+  width: 36px;
+  height: 36px;
+  z-index: 6;
+  background: transparent;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.hamburger-menu:focus {
+  outline: none;
+}
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: white;
+}
+.hamburger-menu span:before, .hamburger-menu span:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+}
+.hamburger-menu span:before {
+  top: -10px;
+}
+.hamburger-menu span:after {
+  bottom: -10px;
+}
+
+.hamburger-menu-x span {
+  -webkit-transition: background 0s 0.3s;
+  transition: background 0s 0.3s;
+}
+.hamburger-menu-x span:before, .hamburger-menu-x span:after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+  transition-delay: 0.3s, 0s;
+}
+.hamburger-menu-x span:before {
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+}
+.hamburger-menu-x span:after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+}
+.hamburger-menu-x.is-active span {
+  background: none;
+}
+.hamburger-menu-x.is-active span:before, .hamburger-menu-x.is-active span:after {
+  -webkit-transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.3s;
+}
+.hamburger-menu-x.is-active span:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.hamburger-menu-x.is-active span:after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menu{
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    z-index: 99999999999999;
+}
+
+.menulist{
+    display: table;
+    background-color: #061b2b;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    position: absolute;
+    right: -100%;
+}
+.open {
+    position: absolute;
+    right: -100%;
+}
+.oppenned{
+	right: 0;
+}
+
+.menulist-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+.ul-div {
+    max-width: 541px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.menu-background-div {
+    width: 540px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.menu-background {
+    position: absolute;
+    top: 51px;
+    left: 90px;
+/*    top: 20px;
+    left: 90px;*/
+}
+
+.ul-menu{
+    list-style-type: none;
+    margin: 0;
+    margin-top: 30px;
+}
+.ul-menu a {
+    color: #fff;
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: 700;
+    font-family:'DaxW04 bold';
+    text-transform: none;
+}
+
+.ul-menu li:first-child a {
+    color:#fdce07 ;
+}
+.ul-menu li:last-child a {
+    color: #b81f30;
+    text-decoration: underline;
+}
+
+.ul-menu li:hover{
+    transform: translateX(10px);
+    transition-timing-function: ease-in;
+    transition-duration: 0.3s;    
+    color:#fdce07 ;
+}
+.ul-menu li:hover a { 
+    color:#fdce07 ;
+}
+
+	</style>
+</head>
+<body>
+
+
+
+<div class="menu">
+<button class="hamburger-menu hamburger-menu-x">
+<span></span>
+</button>
+			<div class="menulist open">
+				<div class="menulist-inner">
+				<div class="menu-background-div">
+					<img class="menu-background" src="img/menu-background.svg"></div>
+
+				<div class="ul-div">
+					<ul class="ul-menu">
+					<li ><a href="#">Home</a></li>
+					<li><a href="#">How to win in the `20s</a></li>
+					<li><a href="#">What we offer</a></li>
+					<li><a href="#">What we have done</a></li>
+					<li><a href="#">How we work</a></li>
+					<li><a href="#">Access to expertise</a></li>
+					<li><a href="#">Keynotes, Coaching & Trainings</a></li>
+					<li><a href="#">The Digital Leadership Program</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Jobs</a></li>
+					<li><a href="#">The founder</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Get the Book "How to Create Innovation"</a></li>
+				</ul>
+			</div>
+			</div>
+			</div>
+		</div>
+</body>
+
+<script type="text/javascript">
+	var toggles = document.querySelectorAll(".hamburger-menu");
+
+for (var i = toggles.length - 1; i >= 0; i--) {
+  var toggle = toggles[i];
+  toggleHandler(toggle);
+}
+
+function toggleHandler(toggle) {
+  toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (this.classList.contains("is-active") === true) {
+      this.classList.remove("is-active");
+      $(".open").removeClass("oppenned");
+    } else {
+      this.classList.add("is-active");
+      $(".open").addClass("oppenned");
+    }
+  });
+}
+
+
+</script>
+</html>
